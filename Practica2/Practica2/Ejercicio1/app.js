@@ -1,9 +1,12 @@
+// VARIABLES
+
 var numAlumnos=1;
 var Alumnos = [];
 var aNotas = [];
 var sum=0;
 var control = 0;
 
+  //FUNCION PRINCIPAL
 function evaluarClase() {
   infoAlumnos();
   enunciado();
@@ -38,6 +41,7 @@ function infoAlumnos(){
   }
 }
 
+//GENERADOR DE INPUTS POR ALUMNO
 function generarInputs(){
   for (let i = 0; i < numAlumnos; i++) {
     Alumnos[i] = prompt("Introduce el nombre del alumno " + (i+1));
@@ -59,7 +63,7 @@ function generarInputs(){
   }
 }
 
-
+//METODO QUE COMPRUEBA LOS INPUT, EN EL CASO DE QUE INCUMPLA ALGO ALERTA AL USUARIO
 function comprobar(){
   for (let i = 0; i < numAlumnos; i++) {
     var notas = document.getElementById("nota" + i).value;
@@ -79,6 +83,7 @@ function comprobar(){
   }
 }
 
+//GENERA LOS BOTONES QUE SE PIDEN EN LA PRACTICA
 function generarBotones() {
   //BOTON COMPROBAR
   document.write('<link rel="stylesheet" href="estilos.css"><div id="boton2">' +
@@ -105,20 +110,25 @@ function refrescar() {
   location.reload();
 }
 
+//METODO QUE HACE APARECER LA VENTANA CON LOS RESULTADOS
 function mostrarVentana(){
   var ventanaNotas;
   ventanaNotas = window.open("","VentanaNotas", "height=600,width=600" );
   var maximo, media, minimo;
-
+  //SACA EL MAXIMO
   maximo= Math.max.apply(null, aNotas);
+  //SACA EL MINIMO
   minimo= Math.min.apply(null,aNotas);
+  
+  //CALCULO DE LA MEDIA
   for (let i = 0; i < numAlumnos; i++) {
     sum=sum +aNotas[i];
   }
 
   media=sum/numAlumnos;
+  //REDONDEA LA MEDIA
   media = Math.round(media * 100) / 100;
-
+  //MUESTRA LA MEDIA POR LA VENTANA 
   ventanaNotas.document.write('<link rel="stylesheet" href="estilos.css">'+
                               '<div id="resultado">'+
                                 '<h1>Nota máxima:</h1><h1 id="maximo"></h1>'+
