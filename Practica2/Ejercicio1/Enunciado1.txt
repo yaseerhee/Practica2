@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+
+                Ejercicio 1 (60%) ➔
+                Necesitan programar en JavaScript una página web donde aparezca lo siguiente:
+                    • Un botón para empezar a evaluar a una clase con notas de 0 a 10. (v)
+                    • onclick --> botón = 
+                               o  Pedir el número de alumnos que tiene una clase (v)
+                               o  Darle al usuario la posibilidad de confirmar dicha entrada. (v)
+                    • En función de dicho número, incorporar tantos INPUT como alumnos tenga la clase.
+                               o  Por ejemplo, 14.
+                    • Al finalizar todos esos INPUT, onclick para resetear todos ellos, o borrarlos.
+                    • Debe aparecer otro botón que tenga la posibilidad de refrescar la página web y volver al inicio.
+                    • Por último, un botón que me muestre EN OTRA VENTANA las estadísticas de la clase:
+                        o Nota media.
+                        o Nota máxima.
+                        o Nota mínima.
